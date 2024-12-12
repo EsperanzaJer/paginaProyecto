@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background: #f5f5dc;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+		}
+
+		.container {
+			max-width: 1000px;
+			width: 90%;
+			background-color: #FFA500;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+		}
+
+		.header {
+			text-align: center;
+		}
+
+		.header h1 {
+			font-family: 'Brush Script MT', cursive;
+			font-size: 50px; 
+			margin: 0;
+			padding: 20px;
+			background: #6b4226;
+			color: white;
+		}
+
+			.topnav {
+				display: flex;
+				justify-content: space-around;
+				background-color: #8b5a2b; 
+				margin-bottom: 20px;
+			}
+
+			.topnav a {
+				flex: 1;
+				text-align: center;
+				color: white;
+				padding: 10px 5px;
+				text-decoration: none;
+			}
+
+			.topnav a:hover {
+				background-color: #deb887;
+				color: black;
+			}
+
+		.section {
+			margin: 20px 0;
+			padding: 20px;
+			background-color: #f5f5dc;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+			text-align: center;
+		}
+
+		.section h2 {
+			color: #6b4226; 
+		}
+
+		.fakeimg {
+			background-color: #302316;
+			width: 100%;
+			padding: 10px;
+		}
+
+		form {
+			margin-top: 20px;
+			background-color: #fff;
+			padding: 20px;
+			border: 1px solid #ddd;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			border-radius: 8px;
+		}
+
+		form label {
+			font-size: 1rem;
+			color: #6b4226;
+			margin-bottom: 10px;
+			display: block;
+		}
+
+		form input[type="email"] {
+			width: 100%;
+			padding: 10px;
+			margin: 10px 0;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			font-size: 1rem;
+			text-align: center;
+		}
+
+		form input[type="submit"] {
+			background-color: #6b4226;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			cursor: pointer;
+			font-size: 1rem;
+			border-radius: 5px;
+			transition: background-color 0.3s;
+
+		}
+
+		form input[type="submit"]:hover {
+			background-color: #8b5a2b;
+		}
+
+		.footer {
+			padding: 20px;
+			text-align: center;
+			background: #8b5a2b;
+			color: white;
+			margin-top: 20px;
+		}
+
+		@media screen and (max-width: 800px) {
+			.topnav {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+		}
+
+		
+		.venta-btn {
+			background-color: #6b4226;
+			color: white;
+			padding: 12px 25px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 1.1rem;
+			transition: background-color 0.3s;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		.venta-btn:hover {
+			background-color: #8b5a2b;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="header">
+			<h1>Libreria "El Libro Durmiente"</h1>
+		</div>
+		<div class="topnav">
+			<a href="#inicio">Inicio</a>
+			<a href="#recomendaciones">Recomendaciones</a>
+			<a href="#venta">Venta</a>
+			<a href="#eventos">Eventos</a>
+			<a href="#contacto">Contacto</a>
+		</div>
+
+		
+		<div id="inicio" class="section">
+			<h2>Inicio</h2>
+			<p>Bienvenido a "El Libro Durmiente", tu espacio para explorar el mundo de la literatura.</p>
+			<p>La libreria "El Libro Durmiente" permite el acceso a diversos catalogos para la busqueda de libros, revistas, herramientas, fuentes de informacion de acceso abierto.</p>
+		</div>
+
+		<div id="recomendaciones" class="section">
+			<h2>Recomendaciones</h2>
+			<img class="fakeimg" src="img/libros.webp" alt="img libros">
+			<p>Explora los libros mas vendidos y las joyas escondidas del momento.</p>
+			<p>Sumergete al mundo de la lectura y animate a descubrir joyas literarias</p>
+		</div>
+
+		<div id="venta" class="section">
+			<h2>Venta de Libros</h2>
+			<img class="fakeimg" src="img/venta.jpg" alt="img venta">
+			<p>Compra libros clasicos y nuevos directamente en nuestra tienda en linea.</p>
+			<p>Da click en "Ver mas" para visualizar nuestros libros en venta.</p>
+			<a href="https://www.amazon.com.mx/s?k=libros&__mk_es_MX=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=26U80Y913CN52&sprefix=libros%2Caps%2C131&ref=nb_sb_noss_1" target="_blank">
+				<button class="venta-btn">Ver mas...</button>
+			</a>
+		</div>
+
+		<div id="eventos" class="section">
+			<h2>Eventos</h2>
+			<img class="fakeimg" src="img/eventos.jpeg" alt="img eventos">
+			<p>Unete a nuestros clubes de lectura, presentaciones de libros y talleres literarios.</p>
+			<form>
+				<label for="email">Registrate para ser el primero en enterarte de nuevos eventos:</label>
+				<input type="email" name="email" placeholder="Correo electronico">
+				<input type="submit" value="Enviar">
+			</form>
+		</div>
+
+		<div id="contacto" class="footer">
+			<h2>Contacto</h2>
+			<p>Email: contacto@ellibrodurmiente.com</p>
+			<p>Telefono: 924-141-1883</p>
+			<p>&copy; 2024 Libreria "El Libro Durmiente". Todos los derechos reservados.</p>
+		</div>
+	</div>
+</body>
+</html>
